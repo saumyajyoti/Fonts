@@ -9,16 +9,14 @@ setlocal
 :: set IOSEVKA_PATH
 cd /d %IOSEVKA_PATH%
 :: Copy private-build-plans.toml here
-call npm run build -- ttf::iosevka-sm
+call npm run build -- ttf::Miosevka
 
 SET "PATH=C:\Program Files (x86)\FontForgeBuilds\bin>;%PATH%"
 :: SET OUTPATH
 :: SET NERDFONT_PATCHER_PATH [ download from https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/FontPatcher.zip]
 cd /d %OUTPATH%
 SET FFPYTHON_EXE="C:\Program Files (x86)\FontForgeBuilds\bin\ffpython.exe"
-%FFPYTHON_EXE% "%NERDFONT_PATCHER_PATH%\font-patcher" -c --careful "%OUTPATH%\iosevka-sm-regular.ttf"
-%FFPYTHON_EXE% "%NERDFONT_PATCHER_PATH%\font-patcher" -c --careful "%OUTPATH%\iosevka-sm-bolditalic.ttf"
-%FFPYTHON_EXE% "%NERDFONT_PATCHER_PATH%\font-patcher" -c --careful "%OUTPATH%\iosevka-sm-italic.ttf"
-%FFPYTHON_EXE% "%NERDFONT_PATCHER_PATH%\font-patcher" -c --careful "%OUTPATH%\iosevka-sm-bold.ttf"
-%FFPYTHON_EXE% "%NERDFONT_PATCHER_PATH%\font-patcher" -c --careful "%OUTPATH%\iosevka-sm-semibold.ttf"
-%FFPYTHON_EXE% "%NERDFONT_PATCHER_PATH%\font-patcher" -c --careful "%OUTPATH%\iosevka-sm-semibolditalic.ttf"
+"C:\Program Files (x86)\FontForgeBuilds\bin\ffpython.exe" "D:\SETUP.tmp\nerdfont\font-patcher" -c -l --careful "D:\source\github\iosevka\dist\Miosevka\ttf\Miosevka-bold.ttf"
+"C:\Program Files (x86)\FontForgeBuilds\bin\ffpython.exe" "D:\SETUP.tmp\nerdfont\font-patcher" -c -l --careful "D:\source\github\iosevka\dist\Miosevka\ttf\Miosevka-bold-Italic.ttf"
+"C:\Program Files (x86)\FontForgeBuilds\bin\ffpython.exe" "D:\SETUP.tmp\nerdfont\font-patcher" -c -l --careful "D:\source\github\iosevka\dist\Miosevka\ttf\Miosevka-italic.ttf"
+"C:\Program Files (x86)\FontForgeBuilds\bin\ffpython.exe" "D:\SETUP.tmp\nerdfont\font-patcher" -c -l --careful "D:\source\github\iosevka\dist\Miosevka\ttf\Miosevka-regular.ttf"
