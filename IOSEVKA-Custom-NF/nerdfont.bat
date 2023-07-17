@@ -16,7 +16,7 @@ SET "PATH=C:\Program Files (x86)\FontForgeBuilds\bin>;%PATH%"
 :: SET NERDFONT_PATCHER_PATH [ download from https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/FontPatcher.zip]
 cd /d %OUTPATH%
 SET FFPYTHON_EXE="C:\Program Files (x86)\FontForgeBuilds\bin\ffpython.exe"
-"C:\Program Files (x86)\FontForgeBuilds\bin\ffpython.exe" "D:\SETUP.tmp\nerdfont\font-patcher" -c -l --careful "D:\source\github\iosevka\dist\Miosevka\ttf\Miosevka-bold.ttf"
-"C:\Program Files (x86)\FontForgeBuilds\bin\ffpython.exe" "D:\SETUP.tmp\nerdfont\font-patcher" -c -l --careful "D:\source\github\iosevka\dist\Miosevka\ttf\Miosevka-bold-Italic.ttf"
-"C:\Program Files (x86)\FontForgeBuilds\bin\ffpython.exe" "D:\SETUP.tmp\nerdfont\font-patcher" -c -l --careful "D:\source\github\iosevka\dist\Miosevka\ttf\Miosevka-italic.ttf"
-"C:\Program Files (x86)\FontForgeBuilds\bin\ffpython.exe" "D:\SETUP.tmp\nerdfont\font-patcher" -c -l --careful "D:\source\github\iosevka\dist\Miosevka\ttf\Miosevka-regular.ttf"
+%FFPYTHON_EXE% "D:\SETUP.tmp\nerdfont\font-patcher" -c -l --careful "D:\source\github\iosevka\dist\Miosevka\ttf\Miosevka-bold.ttf"
+%FFPYTHON_EXE% "D:\SETUP.tmp\nerdfont\font-patcher" -c -l --careful "D:\source\github\iosevka\dist\Miosevka\ttf\Miosevka-boldItalic.ttf"
+%FFPYTHON_EXE% "D:\SETUP.tmp\nerdfont\font-patcher" -c -l --careful "D:\source\github\iosevka\dist\Miosevka\ttf\Miosevka-italic.ttf"
+%FFPYTHON_EXE% "D:\SETUP.tmp\nerdfont\font-patcher" -c -l --careful "D:\source\github\iosevka\dist\Miosevka\ttf\Miosevka-regular.ttf"
