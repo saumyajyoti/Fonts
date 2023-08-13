@@ -7,3 +7,7 @@ Added
 -  IOSEVKA build plan.
 -  Nerdfont Commands
 -  Patched Fonts
+
+## License
+Nerdfont License : See License.txt
+Iosevka License : See License.md
