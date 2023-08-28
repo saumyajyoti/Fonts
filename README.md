@@ -1,4 +1,6 @@
 # Fonts
+![Sample Miosevka](Miosevka-Sample2.png)
+
 Create Custom Nerd Fonts
 
 ## Font details
