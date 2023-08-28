@@ -9,7 +9,7 @@ export-glyph-names = false
   inherits = "ss20"
 
     [buildPlans.miosevka.variants.design]
-    f = "flat-hook-serifless"
+    f = "flat-hook-serifless-crossbar-at-x-height"
     g = "single-storey-serifless"
     i = "serifed-flat-tailed"
     l = "serifed-flat-tailed"
