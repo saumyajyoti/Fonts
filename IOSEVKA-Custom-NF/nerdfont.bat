@@ -1,16 +1,16 @@
 @echo off
 setlocal
-:: TODO/prerequisites in comments
+::  prerequisites in comments
 :: tested in Windows11 setup
 
 :: install nodejs, ttfautohint, fontforge python 3 as mentioned in 
 :: - https://github.com/be5invis/Iosevka/blob/main/doc/custom-build.md#building
-:: - https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/FontPatcher.zip
+:: - https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/FontPatcher.zip
 
 SET IOSEVKA_PATH="D:\SOURCE\github\Iosevka"
-SET "PATH=C:\Program Files (x86)\FontForgeBuilds\bin>;%PATH%"
+SET "PATH=C:\Program Files (x86)\FontForgeBuilds\bin;%PATH%"
 SET FFPYTHON_EXE="C:\Program Files (x86)\FontForgeBuilds\bin\ffpython.exe"
-SET FONTVERNUM=8
+SET FONTVERNUM=9
 SET OUTPATH="D:\Font\Miosevka%FONTVERNUM%"
 :: SET NERDFONT_PATCHER_PATH [ download from path above]
 SET NERDFONT_PATCHER_PATH="D:\SETUP.tmp\nerdfont\font-patcher"

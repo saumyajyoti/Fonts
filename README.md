@@ -8,8 +8,8 @@ Create Custom Nerd Fonts
 Added Custom Iosevka Font and patched with Nerdfont symbols.
 
 Added 
--  IOSEVKA build plan.
--  Nerdfont Commands and script for patching
+-  IOSEVKA build plan. 2 variants with wide chars, namely Miosevka and Riosevka (Rounded variants).
+-  Nerdfont Commands and script for patching, Nerd Fonts Version: 3.2.1
 -  Patched Fonts
 
 ### Sample Image
