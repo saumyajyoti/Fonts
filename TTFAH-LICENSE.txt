@@ -1,0 +1,3 @@
+The ttfautohint library contains a copy of FreeType's āautofitā module, reformatted and using a different function prefix, and with slight extensions for hooks into hinting actions. It therefore inherits the same dual-licensing as FreeType; you can choose between the GNU Public License (GPL) Version 2 and the FreeType License (FTL).
+
+v 1.8.4

@@ -16,5 +16,7 @@ Added
 ![Sample Miosevka](Miosevka-Sample.png)
 
 ## License
-- Nerdfont License : See License.txt
-- Iosevka License : See License.md
+- Nerdfont License : See NERDFONT-License.txt
+- Iosevka License : See IOSEVKA-License.md
+- TTF Autohint License: See TTFAH-LICENSE.txt
+

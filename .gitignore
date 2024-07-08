@@ -1,0 +1,16 @@
+# Dependency
+node_modules
+
+# Settings
+.settings
+.vscode
+
+# Build artifacts
+.build
+dist
+
+# Platform specified files
+.DS_store
+
+bin/nerdfont/bin/scripts/name_parser/__pycache__/*
+bin/nerdfont/bin/scripts/name_parser/log
