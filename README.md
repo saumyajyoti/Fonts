@@ -12,8 +12,9 @@ Added
 -  Nerdfont Commands and script for patching, Nerd Fonts Version: 3.2.1
 -  Patched Fonts
 
-### Sample Image
-![Sample Miosevka](Miosevka-Sample.png)
+### Sample Image (V11)
+![Sample Miosevka](Screenshot-MIOSEVKA-Nerdfont.png)
+![Sample Riosevka](Screenshot-RIOSEVKA-Nerdfont.png)
 
 ## License
 - Nerdfont License : See NERDFONT-License.txt
