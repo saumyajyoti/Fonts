@@ -3,12 +3,15 @@ family = "Riosevka"
 spacing = "normal"
 serifs = "sans"
 noCvSs = true
-exportGlyphNames = false
+exportGlyphNames = true
 
   [buildPlans.Riosevka.variants]
   inherits = "ss20"
 
     [buildPlans.Riosevka.variants.design]
+    one = "no-base"
+    five = "upright-arched-serifless"
+    nine = "open-contour"
     capital-g = "toothless-corner-serifless-hooked"
     capital-j = "serifed"
     a = "single-storey-earless-corner-tailed"
@@ -17,36 +20,41 @@ exportGlyphNames = false
     e = "rounded"
     f = "serifless"
     g = "single-storey-flat-hook-earless-rounded"
-    i = "tailed-serifed"
-    j = "serifed"
-    l = "tailed-serifed"
+    i = "semi-tailed"
+    j = "serifless"
+    l = "semi-tailed"
     m = "earless-rounded-double-arch-short-leg-serifless"
     n = "earless-rounded-straight-serifless"
     p = "earless-rounded-serifless"
     q = "earless-corner-straight-serifless"
     r = "serifless"
     s = "serifless"
+    t = "flat-hook-short-neck2"
     u = "toothless-rounded-serifless"
-    one = "no-base"
-    five = "upright-flat-serifless"
-    nine = "open-contour"
-    asterisk = "penta-low"
+    tittle = "round"
+    asterisk = "turn-hex-low"
+    paren = "flat-arc"
     brace = "curly-flat-boundary"
-    lig-ltgteq = "flat"
+    lig-ltgteq = "slanted"
 
     [buildPlans.Riosevka.variants.italic]
+    five = "oblique-flat-serifless"
+    six = "open-contour"
+    seven = "curly-serifless-crossbar"
+    nine = "open-contour"
     capital-f = "serifless"
     capital-g = "toothless-rounded-serifless-hooked"
     capital-j = "descending-serifed"
     capital-k = "curly-serifless"
     capital-m = "hanging-serifless"
-    capital-q = "curly-tailed"
-    capital-z = "curly-serifless-with-crossbar"
+    capital-q = "crossing-curly-tailed"
+    capital-z = "curly-serifless-with-horizontal-crossbar"
+    a = "single-storey-earless-corner-tailed"
     b = "toothed-serifless"
     d = "toothed-serifless"
     f = "tailed"
-    g = "single-storey-earless-rounded"
-    i = "tailed-serifed"
+    g = "double-storey-open"
+    i = "tailed"
     j = "serifless"
     k = "diagonal-tailed-cursive-serifless"
     l = "tailed-serifed"
@@ -61,30 +69,42 @@ exportGlyphNames = false
     v = "cursive-serifless"
     w = "cursive-serifless"
     x = "curly-serifless"
+    y = "cursive-serifless"
     z = "curly-serifless-with-horizontal-crossbar"
-    five = "oblique-flat-serifless"
-    six = "open-contour"
-    seven = "curly-serifless-crossbar"
-    nine = "open-contour"
-    asterisk = "turn-hex-mid"
+    asterisk = "turn-penta-low"
     ampersand = "lower-open"
     at = "fourfold-solid-inner-tall"
     dollar = "interrupted"
     cent = "through"
     percent = "rings-continuous-slash-also-connected"
-    question = "smooth"
+    question = "corner-flat-hooked"
     pilcrow = "low"
     lig-ltgteq = "slanted"
+
+[buildPlans.Riosevka.weights.Light]
+shape = 300
+menu = 300
+css = 300
 
 [buildPlans.Riosevka.weights.Regular]
 shape = 400
 menu = 400
 css = 400
 
+[buildPlans.Riosevka.weights.SemiBold]
+shape = 600
+menu = 600
+css = 600
+
 [buildPlans.Riosevka.weights.Bold]
 shape = 700
 menu = 700
 css = 700
+
+[buildPlans.Riosevka.weights.ExtraBold]
+shape = 800
+menu = 800
+css = 800
 
 [buildPlans.Riosevka.widths.Normal]
 shape = 600

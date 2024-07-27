@@ -14,10 +14,14 @@ setlocal
 SET IOSEVKA_PATH="%temp%\Iosevka"
 SET "PATH=C:\Program Files (x86)\FontForgeBuilds\bin;%~dp0\..\bin;%PATH%"
 SET FFPYTHON_EXE="C:\Program Files (x86)\FontForgeBuilds\bin\ffpython.exe"
-SET FONTVERNUM=10
+SET FONTVERNUM=11
 SET OUTPATH="D:\Font\Miosevka%FONTVERNUM%"
 SET NERDFONT_PATCHER_PATH="%~dp0\..\bin\nerdfont\font-patcher"
 SET FONTVER=Miosevka%FONTVERNUM%
+
+rmdir /S /Q %OUTPATH%
+mkdir %OUTPATH%
+
 echo =======================================================
 
 if exist %IOSEVKA_PATH%\ (
@@ -41,25 +45,18 @@ echo Build Riosevka
 copy /Y %~dp0\riosevka-build-plans.toml  %IOSEVKA_PATH%\private-build-plans.toml
 call npm run build -- ttf::Riosevka
 
-mkdir %OUTPATH%
-cd /d %OUTPATH%
 echo =======================================================
-echo patch fonts
-%FFPYTHON_EXE% %NERDFONT_PATCHER_PATH% -c "%IOSEVKA_PATH%\dist\miosevka\ttf\miosevka-regular.ttf"
-%FFPYTHON_EXE% %NERDFONT_PATCHER_PATH% -c "%IOSEVKA_PATH%\dist\miosevka\ttf\miosevka-italic.ttf"
-%FFPYTHON_EXE% %NERDFONT_PATCHER_PATH% -c "%IOSEVKA_PATH%\dist\miosevka\ttf\miosevka-bold.ttf"
-%FFPYTHON_EXE% %NERDFONT_PATCHER_PATH% -c "%IOSEVKA_PATH%\dist\miosevka\ttf\miosevka-boldItalic.ttf"
+call :PATCH miosevka
+call :PATCH riosevka
 
-%FFPYTHON_EXE% %NERDFONT_PATCHER_PATH% -c "%IOSEVKA_PATH%\dist\riosevka\ttf\riosevka-regular.ttf"
-%FFPYTHON_EXE% %NERDFONT_PATCHER_PATH% -c "%IOSEVKA_PATH%\dist\riosevka\ttf\riosevka-italic.ttf"
-%FFPYTHON_EXE% %NERDFONT_PATCHER_PATH% -c "%IOSEVKA_PATH%\dist\riosevka\ttf\riosevka-bold.ttf"
-%FFPYTHON_EXE% %NERDFONT_PATCHER_PATH% -c "%IOSEVKA_PATH%\dist\riosevka\ttf\riosevka-boldItalic.ttf"
 echo =======================================================
 echo Copy Files
 copy /Y %~dp0\..\*license.* %OUTPATH%
 copy /Y "%IOSEVKA_PATH%\dist\miosevka\ttf\*.ttf" %OUTPATH%
 copy /Y "%IOSEVKA_PATH%\dist\riosevka\ttf\*.ttf" %OUTPATH%
-cd ..
+
+cd /d %OUTPATH%\..\
+
 echo create %FONTVER%.zip 
 tar.exe -a -c -f "%FONTVER%.zip" %OUTPATH%
 
@@ -74,3 +71,20 @@ REM cd ..
 REM :END
 
 explorer .
+exit /b 0
+
+::================ ROUTINE PATCH ====================
+:PATCH
+
+echo =======================================================
+
+set fontdir="%IOSEVKA_PATH%\dist\%1\ttf"
+echo patch fonts in %fontdir%
+cd /d %fontdir%
+:: setlocal enabledelayedexpansion
+for /r %%f in (%1-*.ttf) do (
+ echo "Patching: %%f"
+ %FFPYTHON_EXE% %NERDFONT_PATCHER_PATH% -c %%f
+)
+exit /b 0
+::====================================================
